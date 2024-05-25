@@ -1,0 +1,73 @@
+### Comparison of Linked Lists and Dynamic Arrays:
+
+#### Time Complexity
+
+**Linked Lists:**
+- **Insert at index**: O(n)
+- **Delete at index**: O(n)
+- **Get size**: O(n) (if not maintaining a size variable)
+- **Is empty**: O(1)
+- **Rotate right**: O(n)
+- **Reverse**: O(n)
+- **Append**: O(n) (O(1) with tail pointer)
+- **Prepend**: O(1)
+- **Merge**: O(n)
+- **Interleave**: O(n + m)
+- **Get middle**: O(n)
+- **Index of**: O(n)
+- **Split at index**: O(n)
+
+**Dynamic Arrays:**
+- **Insert at index**: O(n)
+- **Delete at index**: O(n)
+- **Get size**: O(1)
+- **Is empty**: O(1)
+- **Rotate right**: O(n)
+- **Reverse**: O(n)
+- **Append**: Amortized O(1)
+- **Prepend**: O(n)
+- **Merge**: O(n + m)
+- **Interleave**: O(n + m)
+- **Get middle**: O(1)
+- **Index of**: O(n)
+- **Split at index**: O(n)
+
+#### Space Complexity
+
+**Linked Lists:**
+- Each node requires additional space for a pointer/reference.
+- O(n) for elements plus O(n) for pointers.
+
+**Dynamic Arrays:**
+- Requires a contiguous block of memory.
+- O(n) for elements.
+- Additional space for resizing up to O(n).
+
+#### Advantages and Disadvantages
+
+**Linked Lists:**
+
+**Advantages:**
+- **Dynamic Size**: Easily grows/shrinks.
+- **Efficient Insertions/Deletions**: Especially at the beginning or middle.
+- **Memory Utilization**: Efficient with frequent insertions/deletions.
+
+**Disadvantages:**
+- **Memory Overhead**: Extra memory for pointers.
+- **Sequential Access**: Slower access times (O(n)).
+- **Cache Locality**: Poor due to scattered memory.
+
+**Dynamic Arrays:**
+
+**Advantages:**
+- **Random Access**: O(1) access time.
+- **Memory Utilization**: Efficient for stable or gradually growing sizes.
+- **Compact Memory**: Contiguous storage, improving cache performance.
+
+**Disadvantages:**
+- **Fixed Size**: Requires initial size allocation, resizing can be costly.
+- **Insertions/Deletions**: Inefficient due to element shifting (O(n)).
+- **Wasted Space**: Potential for unused allocated memory.
+
+### Conclusion
+The choice between linked lists and dynamic arrays hinges on specific application requirements. Linked lists are preferable for frequent insertions/deletions, whereas dynamic arrays are suitable for scenarios requiring fast access and stable size. Understanding these trade-offs is key to selecting the optimal data structure.
